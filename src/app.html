@@ -9,7 +9,7 @@
   <ul>
     <li repeat.for="todo of todos">
       <input type="checkbox" checked.bind="todo.done" />
-      <span>
+      <span css="text-decoration: ${todo.done ? 'line-through' : 'none'}">
         ${todo.description}
       </span>
       <button click.trigger="removeTodo(todo)">Remove</button>
